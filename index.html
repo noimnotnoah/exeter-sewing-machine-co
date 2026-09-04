@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exeter Sewing Machine Company, Heavitree Road, Exeter</title>
+<meta name="description" content="Exeter Sewing Machine Company, 7 Heavitree Road, Exeter. New and second-hand sewing machines, servicing and repairs, fabric, haberdashery, knitting and craft supplies.">
+<style>
+  :root{
+    --linen:#ece4d3; --linen-deep:#f5efdf;
+    --ink:#292419; --ink-dim:#6d6350;
+    --thread:#8a3a2f; --thread-light:#a85144;
+    --needle:#4a5d4a; --line:rgba(41,36,25,0.18);
+    --card:#faf6ec; --shadow:0 20px 44px -26px rgba(41,36,25,0.3);
+    --display:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    --sans:"Segoe UI",Helvetica,Arial,sans-serif;
+    --mono:"Courier New",Courier,monospace;
+  }
+  :root[data-theme="dark"]{
+    --linen:#201c15; --linen-deep:#17140e;
+    --ink:#ece6d6; --ink-dim:#a89c86;
+    --thread:#c97a6d; --thread-light:#d89487;
+    --needle:#7fa389; --line:rgba(236,230,216,0.16);
+    --card:#2a251d; --shadow:0 20px 44px -22px rgba(0,0,0,0.55);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --linen:#201c15; --linen-deep:#17140e;
+      --ink:#ece6d6; --ink-dim:#a89c86;
+      --thread:#c97a6d; --thread-light:#d89487;
+      --needle:#7fa389; --line:rgba(236,230,216,0.16);
+      --card:#2a251d; --shadow:0 20px 44px -22px rgba(0,0,0,0.55);
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:.01ms !important; transition-duration:.01ms !important;} }
+  body{ margin:0; background:var(--linen); color:var(--ink); font-family:var(--sans); font-size:17px; line-height:1.65; }
+  a{ color:inherit; }
+  .wrap{ max-width:960px; margin:0 auto; padding:0 32px; }
+
+  header{ position:sticky; top:0; z-index:40; background:var(--linen); border-bottom:1px solid var(--line); }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:22px 32px; max-width:960px; margin:0 auto; }
+  .brand{ text-decoration:none; display:flex; flex-direction:column; gap:2px; }
+  .brand-name{ font-family:var(--display); font-size:21px; letter-spacing:.02em; }
+  .brand-tag{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--thread); }
+  nav.links{ display:flex; gap:26px; font-size:12px; letter-spacing:.1em; text-transform:uppercase; }
+  nav.links a{ text-decoration:none; color:var(--ink-dim); }
+  nav.links a:hover{ color:var(--thread); }
+  @media (max-width:640px){ nav.links{ display:none; } }
+
+  .hero{ padding:84px 0 64px; }
+  .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--thread); margin:0 0 18px; }
+  h1{ font-family:var(--display); font-size:clamp(34px,5.6vw,54px); line-height:1.12; margin:0 0 22px; max-width:16ch; font-weight:400; }
+  .lede{ font-size:19px; color:var(--ink-dim); max-width:54ch; margin:0 0 34px; }
+  .cta-row{ display:flex; gap:16px; flex-wrap:wrap; }
+  .btn{ display:inline-block; padding:14px 26px; text-decoration:none; font-size:13px; letter-spacing:.08em; text-transform:uppercase; font-weight:600; }
+  .btn-primary{ background:var(--thread); color:var(--linen-deep); }
+  .btn-primary:hover{ background:var(--thread-light); }
+  .btn-ghost{ border:1px solid var(--line); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--thread); color:var(--thread); }
+
+  section{ padding:56px 0; }
+  .kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--thread); margin:0 0 10px; }
+  h2{ font-family:var(--display); font-size:clamp(26px,3.6vw,36px); font-weight:400; margin:0 0 30px; }
+
+  .cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media (max-width:820px){ .cards{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:540px){ .cards{ grid-template-columns:1fr; } }
+  .card{ background:var(--card); border:1px solid var(--line); box-shadow:var(--shadow); padding:24px; }
+  .card h3{ font-family:var(--display); font-weight:400; font-size:21px; margin:0 0 8px; }
+  .card p{ font-size:15px; color:var(--ink-dim); margin:0; }
+  .card .tag{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--needle); display:block; margin-bottom:10px; }
+
+  .hours{ display:flex; flex-wrap:wrap; gap:40px; align-items:start; }
+  .hours-card{ background:var(--card); border:1px solid var(--line); box-shadow:var(--shadow); padding:28px 32px; }
+  .hours-card table{ border-collapse:collapse; font-size:15px; }
+  .hours-card td{ padding:5px 0; }
+  .hours-card td:last-child{ padding-left:28px; color:var(--ink-dim); }
+  .note{ font-size:13px; color:var(--ink-dim); font-style:italic; margin-top:10px; }
+
+  .contact-box{ background:var(--card); border:1px solid var(--line); box-shadow:var(--shadow); padding:28px 32px; }
+  .contact-box p{ margin:6px 0; }
+  .contact-box a{ color:var(--thread); text-decoration:none; }
+  .contact-box a:hover{ text-decoration:underline; }
+
+  .placeholder{ display:grid; place-items:center; min-height:180px; border:1px dashed var(--line); color:var(--ink-dim); font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; text-align:center; padding:20px; background:var(--linen-deep); }
+  .brand-strip{ display:flex; flex-wrap:wrap; gap:12px; }
+  .brand-strip span{ border:1px solid var(--line); padding:8px 16px; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); }
+
+  footer{ border-top:1px solid var(--line); padding:36px 0; text-align:center; font-size:13px; color:var(--ink-dim); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="#top" class="brand">
+      <span class="brand-name">Exeter Sewing Machine Company</span>
+      <span class="brand-tag">7 Heavitree Road &middot; Exeter</span>
+    </a>
+    <nav class="links">
+      <a href="#machines">Machines</a>
+      <a href="#shop">The Shop</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Sewing machines, fabric &amp; haberdashery in Exeter</p>
+      <h1>Everything for the sewist, since before the internet made it easy.</h1>
+      <p class="lede">New and second-hand machines from Brother, Bernina, Janome, Husqvarna and Baby Lock, expert servicing and repairs, plus a shop full of fabric, thread, knitting, patchwork and craft supplies. Tucked away on Heavitree Road with parking round the back.</p>
+      <div class="cta-row">
+        <a href="#shop" class="btn btn-primary">Browse the Shop</a>
+        <a href="#contact" class="btn btn-ghost">Find Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="machines">
+    <div class="wrap">
+      <p class="kicker">Machines &amp; Accessories</p>
+      <h2>New, second-hand, serviced and repaired</h2>
+      <div class="brand-strip">
+        <span>Brother</span><span>Bernina</span><span>Janome</span><span>Husqvarna</span><span>Baby Lock</span>
+      </div>
+      <p style="margin:26px 0 0; max-width:60ch;">Whether you're after a first machine, an upgrade, or a faithful old workhorse brought back to life, we'll point you in the right direction. Machines are serviced before they go out, and repairs are done on site.</p>
+      <div class="placeholder" style="margin-top:28px;">Photo: machines &amp; accessories</div>
+    </div>
+  </section>
+
+  <section id="shop" style="background:var(--linen-deep);">
+    <div class="wrap">
+      <p class="kicker">The Shop</p>
+      <h2>Fabric, thread, knitting &amp; every notion in between</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="tag">Fabric</span>
+          <h3>Dress &amp; patchwork fabrics</h3>
+          <p>A changing selection of fabrics for dressmaking, quilting and craft, with multibuy offers on sale rolls.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Haberdashery</span>
+          <h3>Threads, needles &amp; notions</h3>
+          <p>Everything from pins and needles to zips, buttons, interfacing and sewing accessories.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Craft</span>
+          <h3>Knitting, crochet &amp; more</h3>
+          <p>Yarns, patterns, jewellery-making beads, craft tools, storage, books and gift vouchers.</p>
+        </div>
+      </div>
+      <div class="placeholder" style="margin-top:28px;">Photo: the shop floor</div>
+    </div>
+  </section>
+
+  <section id="hours">
+    <div class="wrap">
+      <p class="kicker">Opening Hours</p>
+      <h2>When to find us</h2>
+      <div class="hours">
+        <div class="hours-card">
+          <table>
+            <tr><td>Tuesday</td><td>10:00 &ndash; 16:30</td></tr>
+            <tr><td>Wednesday</td><td>10:00 &ndash; 16:30</td></tr>
+            <tr><td>Thursday</td><td>10:00 &ndash; 16:30</td></tr>
+            <tr><td>Friday</td><td>10:00 &ndash; 16:30</td></tr>
+            <tr><td>Saturday</td><td>10:00 &ndash; 16:30</td></tr>
+          </table>
+          <p class="note">Closed Sundays, Mondays and Bank Holidays.</p>
+        </div>
+        <div class="contact-box" id="contact">
+          <p class="kicker" style="margin:0 0 6px;">Contact</p>
+          <p><strong>Exeter Sewing Machine Company Ltd</strong></p>
+          <p>7 Heavitree Road, Exeter, Devon EX1 2LD</p>
+          <p>Telephone: <a href="tel:01392275660">01392 275660</a></p>
+          <p>Email: <a href="mailto:info@exetersewing.co.uk">info@exetersewing.co.uk</a></p>
+          <p style="margin-top:14px;">Customer parking at the rear off Russell Street; Triangle car park less than a minute's walk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Exeter Sewing Machine Company Ltd &middot; 7 Heavitree Road, Exeter EX1 2LD &middot; 01392 275660
+  </div>
+</footer>
+
+</body>
+</html>
