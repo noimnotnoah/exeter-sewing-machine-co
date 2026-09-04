@@ -7,19 +7,16 @@
 <meta name="description" content="Exeter Sewing Machine Company, 7 Heavitree Road, Exeter. New and second-hand machines from Brother, Bernina, Janome, Husqvarna and Baby Lock. Servicing, repairs, fabric and haberdashery. Open Tuesday to Saturday.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#14110c;
-    --ink-2:#211c14;
-    --paper:#f4efe3;
-    --paper-2:#ebe4d2;
-    --cream:#faf6ea;
-    --brass:#b18a3f;
-    --brass-lt:#d6b36a;
-    --thread:#c0452c;
-    --line:rgba(20,17,12,.16);
-    --line-dark:rgba(244,239,227,.16);
+    --black:#000;
+    --white:#fff;
+    --grey:#f2f2f0;
+    --grey-2:#e6e6e2;
+    --grey-ink:#76766f;
+    --red:#e10600;
+    --line:#d8d8d2;
     --serif:"Fraunces","Iowan Old Style",Georgia,serif;
     --sans:"Inter","Segoe UI",Helvetica,Arial,sans-serif;
     --mono:"IBM Plex Mono","Courier New",monospace;
@@ -30,159 +27,152 @@
     html{scroll-behavior:auto;}
     *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;}
   }
-  body{ background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
-  img{ max-width:100%; display:block; }
-  a{ color:inherit; }
-  .wrap{ max-width:1120px; margin:0 auto; padding:0 28px; }
+  body{ background:var(--white); color:var(--black); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 24px; }
 
-  /* ---------- announcement strip ---------- */
-  .strip{ background:var(--ink); color:var(--cream); font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; padding:9px 0; text-align:center; }
-  .strip b{ color:var(--brass-lt); font-weight:500; }
+  /* ---------- announcement ---------- */
+  .strip{ background:var(--black); color:var(--white); font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; padding:10px 0; text-align:center; }
+  .strip b{ font-weight:700; }
+  .strip .dot{ color:var(--red); }
 
   /* ---------- header ---------- */
-  header{ position:sticky; top:0; z-index:50; background:var(--ink); border-bottom:1px solid var(--line-dark); }
-  .nav-row{ display:flex; align-items:center; justify-content:space-between; gap:24px; padding:14px 28px; max-width:1120px; margin:0 auto; }
-  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
-  .brand-mark{ width:34px; height:34px; flex:none; }
-  .brand-name{ font-family:var(--serif); font-size:19px; color:var(--cream); letter-spacing:.01em; line-height:1.1; }
-  .brand-tag{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass-lt); }
-  nav.links{ display:flex; gap:30px; }
-  nav.links a{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--cream); text-decoration:none; position:relative; padding:6px 0; }
-  nav.links a::after{ content:""; position:absolute; left:0; right:100%; bottom:0; height:1px; background:var(--brass-lt); transition:right .3s ease; }
-  nav.links a:hover{ color:var(--brass-lt); }
+  header{ position:sticky; top:0; z-index:50; background:var(--white); border-bottom:2px solid var(--black); }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; gap:24px; padding:14px 24px; max-width:1200px; margin:0 auto; }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand-mark{ width:32px; height:32px; flex:none; }
+  .brand-name{ font-family:var(--mono); font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; line-height:1.2; }
+  nav.links{ display:flex; gap:32px; }
+  nav.links a{ font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--black); position:relative; padding:6px 0; }
+  nav.links a::after{ content:""; position:absolute; left:0; right:100%; bottom:0; height:2px; background:var(--black); transition:right .25s ease; }
   nav.links a:hover::after{ right:0; }
-  .nav-cta{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink); background:var(--brass-lt); padding:10px 18px; text-decoration:none; }
-  .nav-cta:hover{ background:var(--cream); }
-  @media (max-width:760px){ nav.links{ display:none; } }
+  .nav-cta{ font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--white); background:var(--black); padding:11px 18px; }
+  .nav-cta:hover{ background:var(--red); }
+  @media (max-width:800px){ nav.links{ display:none; } }
 
   /* ---------- hero ---------- */
-  .hero{ background:var(--ink); color:var(--cream); position:relative; overflow:hidden; }
-  .hero::before{ content:""; position:absolute; inset:0; background:radial-gradient(60% 90% at 78% 8%, rgba(177,138,63,.14), transparent 60%); pointer-events:none; }
-  .hero::after{ content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(244,239,227,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(244,239,227,.03) 1px, transparent 1px); background-size:56px 56px; pointer-events:none; }
-  .hero-inner{ position:relative; display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; padding:88px 28px 96px; max-width:1120px; margin:0 auto; }
-  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass-lt); display:flex; align-items:center; gap:14px; margin-bottom:26px; }
-  .eyebrow::before{ content:""; width:44px; height:1px; background:var(--brass); }
-  h1{ font-family:var(--serif); font-weight:340; font-size:clamp(42px,6.4vw,76px); line-height:1.04; letter-spacing:-.01em; margin-bottom:26px; }
-  h1 em{ font-style:italic; color:var(--brass-lt); }
-  .lede{ font-size:18px; color:rgba(244,239,227,.78); max-width:46ch; margin-bottom:36px; }
-  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
-  .btn{ display:inline-block; padding:15px 28px; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; }
-  .btn-solid{ background:var(--brass-lt); color:var(--ink); }
-  .btn-solid:hover{ background:var(--cream); }
-  .btn-ghost{ border:1px solid rgba(244,239,227,.4); color:var(--cream); }
-  .btn-ghost:hover{ border-color:var(--brass-lt); color:var(--brass-lt); }
-  .hero-stats{ display:flex; gap:0; margin-top:56px; border-top:1px solid var(--line-dark); }
-  .stat{ flex:1; padding:20px 24px 0 0; }
-  .stat + .stat{ border-left:1px solid var(--line-dark); padding-left:24px; }
-  .stat .n{ display:block; font-family:var(--serif); font-size:30px; color:var(--cream); }
-  .stat .l{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:rgba(244,239,227,.55); }
-
-  /* hero proof panel */
-  .proof{ position:relative; }
-  .proof-frame{ position:relative; background:var(--ink-2); border:1px solid rgba(177,138,63,.5); padding:10px; }
-  .proof-frame::after{ content:""; position:absolute; inset:7px; border:1px dashed rgba(177,138,63,.35); pointer-events:none; }
-  .proof-img{ height:420px; background:radial-gradient(70% 60% at 50% 35%, #2c251a, #191510); display:grid; place-items:center; position:relative; }
-  .proof-img svg{ opacity:.5; }
-  .proof-cap{ font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--brass-lt); padding:14px 6px 4px; display:flex; justify-content:space-between; }
-  .proof-stitch{ position:absolute; left:50%; top:-14px; transform:translateX(-50%); background:var(--ink); color:var(--brass-lt); font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; padding:4px 14px; border:1px solid rgba(177,138,63,.5); }
+  .hero{ position:relative; border-bottom:2px solid var(--black); }
+  .hero-inner{ display:grid; grid-template-columns:1.2fr .8fr; max-width:1200px; margin:0 auto; }
+  @media (max-width:900px){ .hero-inner{ grid-template-columns:1fr; } }
+  .hero-copy{ padding:72px 24px 64px; }
+  .eyebrow{ font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; margin-bottom:24px; display:flex; align-items:center; gap:10px; }
+  .eyebrow::before{ content:""; width:36px; height:2px; background:var(--red); }
+  h1{ font-family:var(--serif); font-weight:700; font-size:clamp(46px,7.4vw,92px); line-height:.98; letter-spacing:-.02em; margin-bottom:28px; }
+  h1 em{ font-style:italic; font-weight:500; }
+  h1 .strike{ text-decoration:line-through; text-decoration-thickness:3px; }
+  .lede{ font-size:18px; max-width:44ch; color:var(--grey-ink); margin-bottom:36px; }
+  .cta-row{ display:flex; gap:0; }
+  .btn{ display:inline-block; padding:16px 28px; font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; border:2px solid var(--black); }
+  .btn-solid{ background:var(--black); color:var(--white); }
+  .btn-solid:hover{ background:var(--red); border-color:var(--red); }
+  .btn-ghost{ color:var(--black); }
+  .btn-ghost:hover{ background:var(--black); color:var(--white); }
+  .hero-note{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--grey-ink); margin-top:40px; }
+  .hero-note a{ color:var(--black); border-bottom:2px solid var(--black); }
+  .hero-side{ border-left:2px solid var(--black); display:flex; flex-direction:column; }
+  @media (max-width:900px){ .hero-side{ border-left:none; border-top:2px solid var(--black); } }
+  .photo{ flex:1; min-height:420px; background:var(--grey); position:relative; display:grid; place-items:center; overflow:hidden; }
+  .photo svg{ width:120px; height:120px; }
+  .photo .tag{ position:absolute; left:0; bottom:0; background:var(--black); color:var(--white); font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; padding:8px 14px; }
+  .photo .tag em{ font-style:normal; color:var(--red); }
 
   /* ---------- marquee ---------- */
-  .marquee{ background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); overflow:hidden; padding:20px 0; }
-  .marquee-track{ display:flex; gap:0; width:max-content; animation:scroll 36s linear infinite; }
+  .marquee{ background:var(--black); color:var(--white); overflow:hidden; padding:18px 0; border-bottom:2px solid var(--black); }
+  .marquee-track{ display:flex; width:max-content; animation:scroll 32s linear infinite; }
   .marquee:hover .marquee-track{ animation-play-state:paused; }
-  .marquee span{ font-family:var(--serif); font-size:22px; font-style:italic; color:var(--ink-2); padding:0 26px; white-space:nowrap; display:flex; align-items:center; gap:52px; }
-  .marquee span::after{ content:"·"; color:var(--thread); font-size:18px; }
+  .marquee span{ font-family:var(--mono); font-size:14px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; white-space:nowrap; padding:0 24px; display:flex; align-items:center; gap:48px; }
+  .marquee span::after{ content:"◆"; font-size:9px; color:var(--red); }
   @keyframes scroll{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
 
   /* ---------- sections ---------- */
-  section{ padding:96px 0; }
-  .section-head{ display:grid; grid-template-columns:220px 1fr; gap:40px; margin-bottom:56px; }
-  .sec-num{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--thread); text-transform:uppercase; padding-top:10px; }
-  .sec-title{ font-family:var(--serif); font-weight:360; font-size:clamp(28px,4vw,44px); line-height:1.12; max-width:20ch; }
-  .sec-title em{ font-style:italic; color:var(--thread); }
-  @media (max-width:820px){ .section-head{ grid-template-columns:1fr; gap:14px; } }
+  section{ padding:88px 0; }
+  .sec-head{ display:flex; align-items:baseline; justify-content:space-between; gap:24px; border-top:2px solid var(--black); padding-top:22px; margin-bottom:48px; }
+  .sec-num{ font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.16em; color:var(--grey-ink); }
+  h2{ font-family:var(--serif); font-weight:700; font-size:clamp(28px,3.6vw,42px); line-height:1.05; letter-spacing:-.01em; }
+  @media (max-width:700px){ .sec-head{ flex-direction:column; gap:6px; } }
 
-  /* services — editorial rows */
-  .svc{ border-top:1px solid var(--line); }
-  .svc-row{ display:grid; grid-template-columns:1fr 1fr 1.4fr; gap:40px; padding:34px 0; align-items:start; }
+  /* services — black rows */
+  .svc{ border-top:2px solid var(--black); }
+  .svc-row{ display:grid; grid-template-columns:90px 1fr 1fr; gap:32px; padding:40px 0; align-items:start; }
   .svc-row + .svc-row{ border-top:1px solid var(--line); }
-  .svc-no{ font-family:var(--mono); font-size:11px; color:var(--brass); letter-spacing:.14em; }
-  .svc-name{ font-family:var(--serif); font-size:26px; font-weight:400; }
-  .svc-desc{ color:rgba(20,17,12,.72); font-size:15.5px; max-width:46ch; }
-  .svc-desc a{ color:var(--thread); text-decoration:none; border-bottom:1px solid rgba(192,69,44,.35); }
-  .svc-desc a:hover{ border-bottom-color:var(--thread); }
-  @media (max-width:820px){ .svc-row{ grid-template-columns:1fr 1fr; gap:12px 24px; } .svc-desc{ grid-column:1/-1; } }
+  .svc-no{ font-family:var(--mono); font-size:13px; font-weight:700; color:var(--red); }
+  .svc-name{ font-family:var(--serif); font-size:26px; font-weight:600; line-height:1.15; }
+  .svc-desc{ color:var(--grey-ink); font-size:15.5px; max-width:46ch; }
+  .svc-desc a{ color:var(--black); border-bottom:2px solid var(--black); }
+  .svc-desc a:hover{ color:var(--red); border-bottom-color:var(--red); }
+  @media (max-width:800px){ .svc-row{ grid-template-columns:60px 1fr; gap:10px 20px; } .svc-desc{ grid-column:1/-1; } }
 
-  /* shop split */
-  .split{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
-  @media (max-width:820px){ .split{ grid-template-columns:1fr; gap:32px; } }
-  .split-img{ position:relative; }
-  .split-img .frame{ border:1px solid var(--line); padding:8px; background:var(--cream); box-shadow:0 30px 60px -30px rgba(20,17,12,.35); }
-  .split-img .ph{ height:380px; background:var(--paper-2); display:grid; place-items:center; position:relative; }
-  .split-img .ph svg{ opacity:.35; }
-  .split-img .cap{ font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(20,17,12,.5); padding:10px 4px 2px; display:flex; justify-content:space-between; }
-  .list{ list-style:none; margin-top:28px; border-top:1px solid var(--line); }
-  .list li{ display:flex; justify-content:space-between; gap:20px; padding:13px 0; border-bottom:1px solid var(--line); font-size:15px; }
-  .list li span:last-child{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass); padding-top:3px; }
+  /* stock list */
+  .stock{ display:grid; grid-template-columns:repeat(2,1fr); border-top:2px solid var(--black); }
+  @media (max-width:700px){ .stock{ grid-template-columns:1fr; } }
+  .stock-row{ display:flex; justify-content:space-between; gap:20px; padding:18px 4px; border-bottom:1px solid var(--line); font-size:16px; }
+  .stock-row:nth-child(odd){ border-right:1px solid var(--line); padding-right:24px; }
+  @media (max-width:700px){ .stock-row:nth-child(odd){ border-right:none; } }
+  .stock-row b{ font-weight:600; }
+  .stock-row span{ font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--grey-ink); align-self:center; }
 
-  /* hours — ticket */
-  .ticket-row{ display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:start; }
-  @media (max-width:820px){ .ticket-row{ grid-template-columns:1fr; gap:32px; } }
-  .ticket{ position:relative; background:var(--cream); border:1px solid var(--line); box-shadow:0 30px 60px -30px rgba(20,17,12,.3); padding:40px 44px; }
-  .ticket::before,.ticket::after{ content:""; position:absolute; left:50%; transform:translateX(-50%); width:34px; height:34px; border-radius:50%; background:var(--paper); border:1px solid var(--line); }
-  .ticket::before{ top:-18px; }
-  .ticket::after{ bottom:-18px; }
-  .ticket h3{ font-family:var(--mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--thread); margin-bottom:22px; }
-  .ticket table{ width:100%; border-collapse:collapse; font-size:15.5px; }
-  .ticket td{ padding:10px 0; border-bottom:1px dashed var(--line); }
+  /* split image */
+  .split{ display:grid; grid-template-columns:1fr 1fr; }
+  @media (max-width:820px){ .split{ grid-template-columns:1fr; } }
+  .split .photo{ min-height:440px; border-right:2px solid var(--black); }
+  @media (max-width:820px){ .split .photo{ border-right:none; border-bottom:2px solid var(--black); } }
+  .split-copy{ padding:0 0 0 48px; display:flex; flex-direction:column; justify-content:center; }
+  @media (max-width:820px){ .split-copy{ padding:32px 0 0; } }
+  .split-copy p{ font-size:16.5px; max-width:44ch; margin-bottom:18px; }
+  .split-copy .big{ font-family:var(--serif); font-size:30px; font-weight:600; line-height:1.2; margin-bottom:22px; }
+
+  /* hours — black ticket */
+  .visit-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:start; }
+  @media (max-width:820px){ .visit-grid{ grid-template-columns:1fr; gap:32px; } }
+  .ticket{ background:var(--black); color:var(--white); padding:40px 44px; position:relative; }
+  .ticket::before,.ticket::after{ content:""; position:absolute; left:-1px; right:-1px; height:22px; background:var(--white); border-left:2px solid var(--black); border-right:2px solid var(--black); }
+  .ticket::before{ top:-22px; border-top:2px solid var(--black); }
+  .ticket::after{ bottom:-22px; border-bottom:2px solid var(--black); }
+  .ticket h3{ font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--red); margin-bottom:20px; }
+  .ticket table{ width:100%; border-collapse:collapse; font-size:16px; }
+  .ticket td{ padding:11px 0; border-bottom:1px solid rgba(255,255,255,.22); }
   .ticket tr:last-child td{ border-bottom:none; }
-  .ticket td:last-child{ text-align:right; font-family:var(--mono); font-size:13px; color:rgba(20,17,12,.65); }
-  .ticket .today{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--brass); margin-top:18px; }
-  .visit-block{ }
-  .visit-block p{ font-size:15.5px; color:rgba(20,17,12,.72); margin-bottom:18px; max-width:44ch; }
-  .v-line{ display:flex; gap:16px; align-items:baseline; padding:14px 0; border-bottom:1px solid var(--line); font-size:15.5px; }
-  .v-line .k{ font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--brass); flex:none; width:110px; }
-  .v-line a{ color:var(--ink); text-decoration:none; border-bottom:1px solid rgba(20,17,12,.3); }
-  .v-line a:hover{ border-bottom-color:var(--thread); color:var(--thread); }
+  .ticket td:last-child{ text-align:right; font-family:var(--mono); font-size:13px; }
+  .ticket .today{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-top:18px; }
+  .v-line{ display:flex; gap:18px; align-items:baseline; padding:16px 0; border-bottom:1px solid var(--line); font-size:16px; }
+  .v-line .k{ font-family:var(--mono); font-size:10px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--grey-ink); flex:none; width:96px; }
+  .v-line a{ border-bottom:2px solid var(--black); }
+  .v-line a:hover{ color:var(--red); border-bottom-color:var(--red); }
 
   /* ---------- footer ---------- */
-  footer{ background:var(--ink); color:var(--cream); padding:80px 0 40px; }
-  .foot-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px; max-width:1120px; margin:0 auto; padding:0 28px; }
-  @media (max-width:760px){ .foot-grid{ grid-template-columns:1fr; gap:32px; } }
-  .foot-brand .brand-name{ font-size:26px; }
-  .foot-brand p{ color:rgba(244,239,227,.6); font-size:14.5px; margin-top:14px; max-width:36ch; }
-  .foot h4{ font-family:var(--mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass-lt); margin-bottom:18px; }
-  .foot a{ display:block; color:rgba(244,239,227,.75); text-decoration:none; font-size:14.5px; padding:5px 0; }
-  .foot a:hover{ color:var(--brass-lt); }
-  .foot-bottom{ max-width:1120px; margin:56px auto 0; padding:22px 28px 0; border-top:1px solid var(--line-dark); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(244,239,227,.45); }
+  footer{ background:var(--black); color:var(--white); padding:72px 0 32px; margin-top:40px; }
+  .foot-grid{ display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:48px; max-width:1200px; margin:0 auto; padding:0 24px; }
+  @media (max-width:760px){ .foot-grid{ grid-template-columns:1fr; gap:28px; } }
+  .foot-brand .brand-name{ font-size:22px; color:var(--white); }
+  .foot-brand p{ color:rgba(255,255,255,.6); font-size:14.5px; margin-top:14px; max-width:38ch; }
+  .foot h4{ font-family:var(--mono); font-size:10px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--red); margin-bottom:16px; }
+  .foot a{ display:block; color:rgba(255,255,255,.75); font-size:14.5px; padding:5px 0; }
+  .foot a:hover{ color:var(--white); text-decoration:underline; }
+  .foot-bottom{ max-width:1200px; margin:56px auto 0; padding:20px 24px 0; border-top:1px solid rgba(255,255,255,.25); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.5); }
 
   /* reveal */
-  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal{ opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
   .reveal.in{ opacity:1; transform:none; }
 </style>
 </head>
 <body>
 
-<div class="strip">7 Heavitree Road, Exeter &nbsp;·&nbsp; <b>Open Tue–Sat, 10:00–16:30</b> &nbsp;·&nbsp; Closed Sun &amp; Mon</div>
+<div class="strip">7 Heavitree Road, Exeter <span class="dot">●</span> Open Tue–Sat 10:00–16:30 <span class="dot">●</span> <b>Closed Sun &amp; Mon</b></div>
 
 <header>
   <div class="nav-row">
     <a href="#top" class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="36" height="36" stroke="#d6b36a" stroke-width="1.5"/>
-        <rect x="12" y="14" width="16" height="12" rx="2" stroke="#f4efe3" stroke-width="1.5"/>
-        <path d="M8 17h4M8 21h4M8 25h4M28 17h4M28 21h4M28 25h4" stroke="#f4efe3" stroke-width="1.2"/>
-        <path d="M14 30c6-4 6 4 12 0" stroke="#c0452c" stroke-width="1.6" stroke-linecap="round"/>
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="28" stroke="#000" stroke-width="2"/>
+        <rect x="10" y="11" width="12" height="10" rx="1.5" stroke="#000" stroke-width="2"/>
+        <path d="M6 13.5h4M6 17h4M6 20.5h4M22 13.5h4M22 17h4M22 20.5h4" stroke="#000" stroke-width="1.6"/>
+        <path d="M12 25.5c4.5-3.5 4.5 3.5 9 0" stroke="#e10600" stroke-width="2" stroke-linecap="round"/>
       </svg>
-      <span>
-        <span class="brand-name">Exeter Sewing Machine Co.</span>
-        <span class="brand-tag">Heavitree Road &middot; Est. Years of Service</span>
-      </span>
+      <span class="brand-name">Exeter Sewing Machine Co.</span>
     </a>
     <nav class="links">
-      <a href="#machines">Machines</a>
       <a href="#services">Services</a>
-      <a href="#shop">The Shop</a>
+      <a href="#shop">Shop</a>
       <a href="#visit">Visit</a>
     </nav>
     <a class="nav-cta" href="tel:01392275660">01392 275660</a>
@@ -194,31 +184,25 @@
   <!-- HERO -->
   <section class="hero" style="padding:0;">
     <div class="hero-inner">
-      <div>
-        <p class="eyebrow">Independent &middot; Exeter &middot; Since long before the internet</p>
-        <h1>Machines that <em>stitch</em>, serviced by hands that know them.</h1>
-        <p class="lede">New and second-hand machines from Brother, Bernina, Janome, Husqvarna and Baby Lock. On-site servicing and repairs, and a shop full of fabric, thread and every notion in between.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Independent shop &middot; Exeter &middot; Est. years ago</p>
+        <h1>Sewing machines<br><em>that work,</em><br>serviced by<br>hands that <span class="strike">know</span> <em>care.</em></h1>
+        <p class="lede">New and second-hand machines from Brother, Bernina, Janome, Husqvarna and Baby Lock. On-site servicing and repairs, plus a shop full of fabric, thread and every notion in between. 7 Heavitree Road, Exeter.</p>
         <div class="cta-row">
           <a class="btn btn-solid" href="#services">What we do</a>
           <a class="btn btn-ghost" href="#visit">Find the shop</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="n">5</span><span class="l">Leading brands</span></div>
-          <div class="stat"><span class="n">Tue–Sat</span><span class="l">Open every week</span></div>
-          <div class="stat"><span class="n">On-site</span><span class="l">Servicing &amp; repairs</span></div>
-        </div>
+        <p class="hero-note">Photo: <a href="#shop">the shop floor</a> &mdash; Tue&ndash;Sat, 10:00&ndash;16:30</p>
       </div>
-      <div class="proof reveal">
-        <div class="proof-frame">
-          <div class="proof-img">
-            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
-              <rect x="6" y="6" width="60" height="60" stroke="#d6b36a" stroke-width="1.5"/>
-              <rect x="22" y="26" width="28" height="20" rx="3" stroke="#d6b36a" stroke-width="1.5"/>
-              <path d="M14 31h8M14 38h8M14 45h8M50 31h8M50 38h8M50 45h8" stroke="#d6b36a" stroke-width="1.4"/>
-              <path d="M26 54c10-6 10 8 20 0" stroke="#c0452c" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="proof-cap"><span>Fig. 01 — The shop floor</span><span>Photo to come</span></div>
+      <div class="hero-side">
+        <div class="photo">
+          <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <rect x="10" y="10" width="100" height="100" stroke="#000" stroke-width="3"/>
+            <rect x="36" y="42" width="48" height="36" rx="3" stroke="#000" stroke-width="3"/>
+            <path d="M22 52h14M22 62h14M22 72h14M84 52h14M84 62h14M84 72h14" stroke="#000" stroke-width="2.4"/>
+            <path d="M44 94c18-12 18 12 36 0" stroke="#e10600" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <span class="tag">Fig. 01 <em>/</em> photo to come</span>
         </div>
       </div>
     </div>
@@ -233,76 +217,79 @@
   </div>
 
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" style="padding-top:72px;">
     <div class="wrap">
-      <div class="section-head reveal">
-        <p class="sec-num">01 — What we do</p>
-        <h2 class="sec-title">Three honest services, <em>one small shop</em></h2>
+      <div class="sec-head reveal">
+        <h2>What we do</h2>
+        <p class="sec-num">01 / Services</p>
       </div>
       <div class="svc">
         <div class="svc-row reveal">
-          <span class="svc-no">A.</span>
+          <span class="svc-no">A</span>
           <h3 class="svc-name">New &amp; second-hand machines</h3>
-          <p class="svc-desc">Machines from Brother, Bernina, Janome, Husqvarna and Baby Lock — plus the best of the second-hand market. Every used machine is checked and serviced before it goes out, and we'll happily talk you through what actually suits how you sew.</p>
+          <p class="svc-desc">Machines from Brother, Bernina, Janome, Husqvarna and Baby Lock, plus the best of the second-hand market. Every used machine is checked and serviced before it goes out, and we'll talk you through what actually suits how you sew.</p>
         </div>
         <div class="svc-row reveal">
-          <span class="svc-no">B.</span>
+          <span class="svc-no">B</span>
           <h3 class="svc-name">Servicing &amp; repairs</h3>
-          <p class="svc-desc">Done on site, not sent away. Timers, tension, feeds, electrics — whatever's wrong, we'll get it sewing again and tell you honestly whether it's worth the fix.</p>
+          <p class="svc-desc">Done on site, never sent away. Timers, tension, feeds, electrics — whatever's wrong, we'll get it sewing again and tell you honestly whether it's worth the fix.</p>
         </div>
         <div class="svc-row reveal">
-          <span class="svc-no">C.</span>
+          <span class="svc-no">C</span>
           <h3 class="svc-name">Fabric, haberdashery &amp; craft</h3>
-          <p class="svc-desc">Dress and patchwork fabrics, thread, needles, zips, buttons, knitting and crochet yarns, beads, books and gift vouchers — a proper old-fashioned counter of useful things.</p>
+          <p class="svc-desc">Dress and patchwork fabrics, thread, needles, zips, buttons, yarns, beads, books and gift vouchers — a proper old-fashioned counter of useful things.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- THE SHOP -->
-  <section id="shop" style="background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <section id="shop" style="padding-top:0;">
     <div class="wrap">
-      <div class="section-head reveal">
-        <p class="sec-num">02 — The shop</p>
-        <h2 class="sec-title">A counter of <em>useful things</em>, a few steps off the Triangle</h2>
+      <div class="sec-head reveal">
+        <h2>In stock, most weeks</h2>
+        <p class="sec-num">02 / The shop</p>
       </div>
+      <div class="stock">
+        <div class="stock-row reveal"><b>Dress &amp; patchwork fabrics</b><span>Rotating stock</span></div>
+        <div class="stock-row reveal"><b>Threads, needles, pins, zips</b><span>All the notions</span></div>
+        <div class="stock-row reveal"><b>Knitting &amp; crochet yarns</b><span>Patterns too</span></div>
+        <div class="stock-row reveal"><b>Jewellery-making beads</b><span>Bulk &amp; singles</span></div>
+        <div class="stock-row reveal"><b>Craft tools, storage, books</b><span>For every project</span></div>
+        <div class="stock-row reveal"><b>Gift vouchers</b><span>The safe present</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP SPLIT -->
+  <section style="padding-top:72px; border-top:2px solid var(--black);">
+    <div class="wrap">
       <div class="split">
-        <div class="split-img reveal">
-          <div class="frame">
-            <div class="ph">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <path d="M10 52c14-2 30-10 44-34" stroke="#b18a3f" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="50" cy="22" r="5" stroke="#c0452c" stroke-width="2"/>
-                <path d="M8 56h48" stroke="#b18a3f" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="cap"><span>Fig. 02 — Inside the shop</span><span>Photo to come</span></div>
-          </div>
+        <div class="photo reveal">
+          <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <path d="M16 96c26-4 52-16 88-58" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="92" cy="40" r="8" stroke="#e10600" stroke-width="3"/>
+            <path d="M12 104h96" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="tag">Fig. 02 <em>/</em> inside the shop</span>
         </div>
-        <div class="reveal">
-          <p style="font-size:16.5px; color:rgba(20,17,12,.75); max-width:48ch;">Stock changes weekly, but the shelves are never short of the essentials:</p>
-          <ul class="list">
-            <li><span>Dress &amp; patchwork fabrics</span><span>Rotating stock</span></li>
-            <li><span>Threads, needles, pins, zips</span><span>All the notions</span></li>
-            <li><span>Knitting &amp; crochet yarns</span><span>Patterns too</span></li>
-            <li><span>Jewellery-making beads</span><span>Bulk &amp; singles</span></li>
-            <li><span>Craft tools, storage, books</span><span>For every project</span></li>
-            <li><span>Gift vouchers</span><span>The safe present</span></li>
-          </ul>
-          <p style="margin-top:22px; font-size:15.5px; color:rgba(20,17,12,.72);">Multibuy offers run on sale fabrics most weeks — worth asking at the counter.</p>
+        <div class="split-copy reveal">
+          <p class="big">A counter of useful things, a few steps off the Triangle.</p>
+          <p>Stock changes weekly, but the shelves are never short of the essentials. Multibuy offers run on sale fabrics most weeks — worth asking at the counter.</p>
+          <p>Our main entrance is on Heavitree Road, with customer parking round the back off Russell Street. The Triangle car park is less than a minute's walk.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- VISIT -->
-  <section id="visit">
+  <section id="visit" style="padding-top:88px;">
     <div class="wrap">
-      <div class="section-head reveal">
-        <p class="sec-num">03 — Visit</p>
-        <h2 class="sec-title">Easy to reach, <em>easy to park</em></h2>
+      <div class="sec-head reveal">
+        <h2>Visit</h2>
+        <p class="sec-num">03 / Hours &amp; directions</p>
       </div>
-      <div class="ticket-row">
+      <div class="visit-grid">
         <div class="ticket reveal">
           <h3>Opening hours</h3>
           <table>
@@ -314,12 +301,11 @@
           </table>
           <p class="today">Closed Sundays, Mondays &amp; bank holidays</p>
         </div>
-        <div class="visit-block reveal">
-          <p>Our main entrance is on Heavitree Road, with a customer parking space round the back off Russell Street — the Triangle car park is less than a minute's walk.</p>
+        <div class="reveal">
           <div class="v-line"><span class="k">Address</span><span>7 Heavitree Road, Exeter, EX1 2LD</span></div>
           <div class="v-line"><span class="k">Phone</span><a href="tel:01392275660">01392 275660</a></div>
           <div class="v-line"><span class="k">Email</span><a href="mailto:info@exetersewing.co.uk">info@exetersewing.co.uk</a></div>
-          <div class="v-line"><span class="k">Parking</span><span>Rear of shop off Russell St</span></div>
+          <div class="v-line"><span class="k">Parking</span><span>Rear of shop, off Russell St</span></div>
         </div>
       </div>
     </div>
@@ -360,7 +346,7 @@
         entries.forEach(function(e){
           if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
         });
-      }, {threshold:.12});
+      }, {threshold:.1});
       els.forEach(function(el){ io.observe(el); });
     } else {
       document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
